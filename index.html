@@ -1,87 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alberto Nahra - Cybersecurity Professional</title>
+    <title>Alberto Nahra — Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-icon">🔐</span>
+                <i class="fas fa-lock nav-logo-icon"></i>
                 <span>Alberto Nahra</span>
             </div>
+
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home"          class="nav-link active"  data-i18n="nav.home">Accueil</a></li>
+                <li><a href="#profil"        class="nav-link"         data-i18n="nav.profil">Profil</a></li>
+                <li><a href="#about"         class="nav-link"         data-i18n="nav.about">À propos</a></li>
+                <li><a href="#skills"        class="nav-link"         data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#competences"   class="nav-link"         data-i18n="nav.competences">Compétences</a></li>
+                <li><a href="#projects"      class="nav-link"         data-i18n="nav.projects">Projets</a></li>
+                <li><a href="#experience"    class="nav-link"         data-i18n="nav.experience">Expérience</a></li>
+                <li><a href="#education"     class="nav-link"         data-i18n="nav.education">Formation</a></li>
+                <li><a href="#certifications"class="nav-link"         data-i18n="nav.certifications">Certifications</a></li>
+                <li><a href="#lep"           class="nav-link"         data-i18n="nav.lep">LEP</a></li>
+                <li><a href="#valeurs"       class="nav-link"         data-i18n="nav.valeurs">Valeurs</a></li>
+                <li><a href="#vision"        class="nav-link"         data-i18n="nav.vision">Vision</a></li>
+                <li><a href="#contact"       class="nav-link"         data-i18n="nav.contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div class="nav-actions">
+                <!-- Language Toggle -->
+                <div class="lang-toggle" role="group" aria-label="Language selector">
+                    <button class="lang-btn active" data-lang="fr" aria-label="Français" aria-pressed="true">
+                        <span class="lang-flag" aria-hidden="true">🇫🇷</span>
+                        <span class="lang-code">FR</span>
+                    </button>
+                    <span class="lang-sep" aria-hidden="true"></span>
+                    <button class="lang-btn" data-lang="en" aria-label="English" aria-pressed="false">
+                        <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+                        <span class="lang-code">EN</span>
+                    </button>
+                </div>
+                <!-- Hamburger -->
+                <div class="hamburger" id="hamburger" role="button" aria-label="Menu" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO ===== -->
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-content container">
             <div class="hero-text">
+                <span class="hero-tag">
+                    <i class="fas fa-terminal"></i>
+                    <span data-i18n="hero.tag">Cybersécurité &amp; Réseaux</span>
+                </span>
                 <h1 class="hero-title">Alberto Nahra</h1>
-                <h2 class="hero-subtitle">Cybersecurity & Network Engineer</h2>
-                <p class="hero-description">Passionate about offensive security, penetration testing, and building secure infrastructure. ESAIP Engineering Student specializing in Networks & Cybersecurity.</p>
+                <h2 class="hero-subtitle" data-i18n="hero.subtitle">Ingénieur Cybersécurité &amp; Réseaux</h2>
+                <p class="hero-description" data-i18n="hero.desc">Passionné par la sécurité offensive, les tests d'intrusion et la construction d'infrastructures sécurisées. Étudiant ingénieur à l'ESAIP, spécialisé en Réseaux &amp; Cybersécurité.</p>
                 <div class="hero-buttons">
                     <a href="Alberto Nahra CV  (1).pdf" class="btn btn-primary" download>
-                        <i class="fas fa-download"></i> Download CV
+                        <i class="fas fa-download"></i>
+                        <span data-i18n="hero.btn_cv">Télécharger CV</span>
                     </a>
                     <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i> Get in Touch
+                        <i class="fas fa-envelope"></i>
+                        <span data-i18n="hero.btn_contact">Me Contacter</span>
                     </a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="profile.png" alt="Alberto Nahra" class="profile-img">
+                <div class="hero-img-ring">
+                    <img src="profile.png" alt="Alberto Nahra" class="profile-img">
+                </div>
+                <div class="hero-img-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span data-i18n="hero.badge">Cybersécurité</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- ===== MON PROFIL & MON PARCOURS ===== -->
+    <section id="profil" class="profil">
+        <div class="profil-grid-bg"></div>
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About Me</h2>
+                <span class="section-tag" data-i18n="profil.tag">// Qui suis-je ?</span>
+                <h2 class="section-title" data-i18n="profil.title">Mon Profil &amp; Mon Parcours</h2>
                 <div class="title-underline"></div>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a dedicated cybersecurity professional and engineering student at ESAIP, specializing in Networks and Cybersecurity. As a Cybersecurity Intern at Monty Holding (Monty Mobile), I've developed hands-on expertise in penetration testing, vulnerability assessment, and red team operations.</p>
-                    <p>My passion lies in offensive security and understanding attack vectors to build more resilient systems. With a strong foundation in networking infrastructure and cloud technologies, I'm committed to continuous learning and achieving industry certifications like CEH and EJPT+.</p>
-                    <p>Based between Lebanon and France, I bring a multicultural perspective and fluency in multiple languages to international cybersecurity challenges.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">4+</span>
-                            <span class="stat-label">Years Learning</span>
+            <div class="profil-layout">
+                <div class="profil-card-wrap scroll-reveal">
+                    <div class="profil-card">
+                        <div class="profil-card-border-glow"></div>
+                        <div class="profil-avatar-ring">
+                            <img src="profile.png" alt="Alberto Nahra" class="profil-avatar">
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Certifications</span>
+                        <div class="profil-card-info">
+                            <h3 class="profil-name">Alberto Nahra</h3>
+                            <p class="profil-role" data-i18n="profil.role">Étudiant Ingénieur</p>
+                            <p class="profil-school">
+                                <i class="fas fa-university"></i>
+                                <span data-i18n="profil.school">ESAIP Engineering School</span>
+                            </p>
+                            <p class="profil-spec">
+                                <i class="fas fa-shield-alt"></i>
+                                <span data-i18n="profil.spec">Réseaux &amp; Cybersécurité</span>
+                            </p>
+                            <div class="profil-locations">
+                                <span class="location-badge">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span data-i18n="profil.loc1">Liban</span>
+                                </span>
+                                <span class="location-badge">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span data-i18n="profil.loc2">France</span>
+                                </span>
+                            </div>
+                            <div class="profil-available">
+                                <span class="available-dot"></span>
+                                <span data-i18n="profil.available">Disponible pour opportunités</span>
+                            </div>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Languages</span>
+                    </div>
+                </div>
+
+                <div class="profil-story">
+                    <div class="story-item scroll-reveal" data-delay="100">
+                        <div class="story-icon-wrap"><i class="fas fa-bolt"></i></div>
+                        <div class="story-body">
+                            <h4 data-i18n="profil.story1_title">L'Élément Déclencheur</h4>
+                            <p data-i18n="profil.story1_text">Ma passion pour la cybersécurité est née d'une expérience personnelle : mon compte a été piraté. Depuis, je me consacre à comprendre et maîtriser la sécurité offensive.</p>
+                        </div>
+                    </div>
+                    <div class="story-item scroll-reveal" data-delay="200">
+                        <div class="story-icon-wrap"><i class="fas fa-globe"></i></div>
+                        <div class="story-body">
+                            <h4 data-i18n="profil.story2_title">Profil Multiculturel</h4>
+                            <p data-i18n="profil.story2_text">Entre le Liban et la France, avec des expériences Erasmus en Hongrie, Grèce et Espagne — j'apporte une vision internationale aux défis de cybersécurité modernes.</p>
+                        </div>
+                    </div>
+                    <div class="story-item scroll-reveal" data-delay="300">
+                        <div class="story-icon-wrap"><i class="fas fa-crosshairs"></i></div>
+                        <div class="story-body">
+                            <h4 data-i18n="profil.story3_title">Sécurité Offensive</h4>
+                            <p data-i18n="profil.story3_text">Passionné par le red teaming, le penetration testing et la compréhension des vecteurs d'attaque pour construire des systèmes plus résilients.</p>
+                        </div>
+                    </div>
+                    <div class="story-item scroll-reveal" data-delay="400">
+                        <div class="story-icon-wrap"><i class="fas fa-rocket"></i></div>
+                        <div class="story-body">
+                            <h4 data-i18n="profil.story4_title">Innovation &amp; Création Digitale</h4>
+                            <p data-i18n="profil.story4_text">Le développement web, la cybersécurité et la création digitale se rejoignent dans ma vision : créer des expériences numériques modernes et sécurisées.</p>
                         </div>
                     </div>
                 </div>
@@ -89,19 +171,51 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="about.tag">// À propos</span>
+                <h2 class="section-title" data-i18n="about.title">À propos de moi</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about.p1">Je suis un professionnel de la cybersécurité et étudiant ingénieur à l'ESAIP, spécialisé en Réseaux et Cybersécurité. En tant que stagiaire en cybersécurité chez Monty Holding (Monty Mobile), j'ai développé une expertise pratique en tests d'intrusion, évaluation des vulnérabilités et opérations red team.</p>
+                    <p data-i18n="about.p2">Ma passion réside dans la sécurité offensive et la compréhension des vecteurs d'attaque pour construire des systèmes plus résilients. Avec une solide base en infrastructure réseau et en technologies cloud, je m'engage dans un apprentissage continu et l'obtention de certifications comme le CEH et l'EJPT+.</p>
+                    <p data-i18n="about.p3">Entre le Liban et la France, j'apporte une perspective multiculturelle et une maîtrise de plusieurs langues aux défis internationaux de la cybersécurité.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="4">4+</span>
+                            <span class="stat-label" data-i18n="about.stat1">Années d'Apprentissage</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="5">5+</span>
+                            <span class="stat-label" data-i18n="about.stat2">Certifications</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="10">10+</span>
+                            <span class="stat-label" data-i18n="about.stat3">Langues</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS (existing) ===== -->
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Technical Skills</h2>
+                <span class="section-tag" data-i18n="skills.tag">// Expertise</span>
+                <h2 class="section-title" data-i18n="skills.title">Compétences Techniques</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="skills-grid">
-                <!-- Cybersecurity -->
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-shield-alt"></i>
-                        <h3>Cybersecurity</h3>
+                        <h3 data-i18n="skills.cat1">Cybersécurité</h3>
                     </div>
                     <div class="skill-list">
                         <span class="skill-tag">Penetration Testing</span>
@@ -112,12 +226,10 @@
                         <span class="skill-tag">Red Team Ops</span>
                     </div>
                 </div>
-
-                <!-- Networking -->
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-network-wired"></i>
-                        <h3>Networking</h3>
+                        <h3 data-i18n="skills.cat2">Réseaux</h3>
                     </div>
                     <div class="skill-list">
                         <span class="skill-tag">LAN/WAN</span>
@@ -128,12 +240,10 @@
                         <span class="skill-tag">Cisco Packet Tracer</span>
                     </div>
                 </div>
-
-                <!-- Cloud & DevSecOps -->
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-cloud"></i>
-                        <h3>Cloud & DevSecOps</h3>
+                        <h3 data-i18n="skills.cat3">Cloud &amp; DevSecOps</h3>
                     </div>
                     <div class="skill-list">
                         <span class="skill-tag">Azure</span>
@@ -142,12 +252,10 @@
                         <span class="skill-tag">CI/CD</span>
                     </div>
                 </div>
-
-                <!-- Programming -->
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-code"></i>
-                        <h3>Programming</h3>
+                        <h3 data-i18n="skills.cat4">Programmation</h3>
                     </div>
                     <div class="skill-list">
                         <span class="skill-tag">Python</span>
@@ -158,12 +266,10 @@
                         <span class="skill-tag">HTML/CSS</span>
                     </div>
                 </div>
-
-                <!-- Tools & Platforms -->
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-tools"></i>
-                        <h3>Tools & Platforms</h3>
+                        <h3 data-i18n="skills.cat5">Outils &amp; Plateformes</h3>
                     </div>
                     <div class="skill-list">
                         <span class="skill-tag">Nmap</span>
@@ -174,42 +280,119 @@
                         <span class="skill-tag">VMware</span>
                     </div>
                 </div>
-
-                <!-- Soft Skills -->
                 <div class="skill-category">
                     <div class="skill-header">
                         <i class="fas fa-lightbulb"></i>
-                        <h3>Soft Skills</h3>
+                        <h3 data-i18n="skills.cat6">Savoir-être</h3>
                     </div>
                     <div class="skill-list">
-                        <span class="skill-tag">Problem Solving</span>
-                        <span class="skill-tag">Analysis</span>
-                        <span class="skill-tag">Communication</span>
-                        <span class="skill-tag">Team Work</span>
-                        <span class="skill-tag">Adaptability</span>
+                        <span class="skill-tag" data-i18n="comp.prob_solving">Résolution de Problèmes</span>
+                        <span class="skill-tag" data-i18n="comp.analysis">Analyse</span>
+                        <span class="skill-tag" data-i18n="comp.communication">Communication</span>
+                        <span class="skill-tag" data-i18n="comp.teamwork">Travail d'Équipe</span>
+                        <span class="skill-tag" data-i18n="comp.adaptability">Adaptabilité</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ===== MES COMPÉTENCES (new) ===== -->
+    <section id="competences" class="competences">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="comp.tag">// Compétences détaillées</span>
+                <h2 class="section-title" data-i18n="comp.title">Mes Compétences</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="competences-grid">
+
+                <!-- A. Techniques -->
+                <div class="comp-category scroll-reveal" data-delay="0">
+                    <div class="comp-category-header">
+                        <div class="comp-icon-wrap cyan"><i class="fas fa-terminal"></i></div>
+                        <div>
+                            <h3 data-i18n="comp.tech_title">Compétences Techniques</h3>
+                            <p class="comp-category-sub" data-i18n="comp.tech_sub">Outils &amp; Technologies</p>
+                        </div>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fab fa-python"></i> Python</span><span class="skill-pct">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fab fa-js"></i> JavaScript</span><span class="skill-pct">70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fab fa-html5"></i> HTML/CSS</span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-code"></i> C++</span><span class="skill-pct">55%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="55"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fab fa-linux"></i> Linux</span><span class="skill-pct">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-network-wired"></i> Networking</span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-shield-alt"></i> Cybersecurity</span><span class="skill-pct">82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-bug"></i> Penetration Testing</span><span class="skill-pct">78%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-server"></i> VMware</span><span class="skill-pct">70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fab fa-docker"></i> Docker</span><span class="skill-pct">65%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-cloud"></i> Azure</span><span class="skill-pct">60%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="60"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fab fa-github"></i> Git/GitHub</span><span class="skill-pct">82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-sitemap"></i> Cisco Packet Tracer</span><span class="skill-pct">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fab fa-linux"></i> Kali Linux</span><span class="skill-pct">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+                    </div>
+                </div>
+
+                <!-- B. Comportementales -->
+                <div class="comp-category scroll-reveal" data-delay="150">
+                    <div class="comp-category-header">
+                        <div class="comp-icon-wrap purple"><i class="fas fa-users"></i></div>
+                        <div>
+                            <h3 data-i18n="comp.behav_title">Compétences Comportementales</h3>
+                            <p class="comp-category-sub" data-i18n="comp.behav_sub">Savoir-être</p>
+                        </div>
+                    </div>
+                    <div class="skill-bars skill-bars--purple">
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-comments"></i> <span data-i18n="comp.communication">Communication</span></span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-handshake"></i> <span data-i18n="comp.teamwork">Travail d'Équipe</span></span><span class="skill-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-sync-alt"></i> <span data-i18n="comp.adaptability">Adaptabilité</span></span><span class="skill-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-brain"></i> <span data-i18n="comp.stress">Gestion du Stress</span></span><span class="skill-pct">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-search"></i> <span data-i18n="comp.curiosity">Curiosité</span></span><span class="skill-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-tasks"></i> <span data-i18n="comp.organization">Organisation</span></span><span class="skill-pct">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-fire"></i> Discipline</span><span class="skill-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+                    </div>
+                </div>
+
+                <!-- C. Transversales -->
+                <div class="comp-category scroll-reveal" data-delay="300">
+                    <div class="comp-category-header">
+                        <div class="comp-icon-wrap green"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <h3 data-i18n="comp.trans_title">Compétences Transversales</h3>
+                            <p class="comp-category-sub" data-i18n="comp.trans_sub">Savoir-faire global</p>
+                        </div>
+                    </div>
+                    <div class="skill-bars skill-bars--green">
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-project-diagram"></i> <span data-i18n="comp.proj_mgmt">Gestion de Projet</span></span><span class="skill-pct">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-puzzle-piece"></i> <span data-i18n="comp.prob_solving">Résolution de Problèmes</span></span><span class="skill-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-lightbulb"></i> <span data-i18n="comp.creative">Pensée Créative</span></span><span class="skill-pct">82%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-bullhorn"></i> <span data-i18n="comp.digital_comm">Communication Digitale</span></span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-eye"></i> <span data-i18n="comp.tech_watch">Veille Technologique</span></span><span class="skill-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
+                        <div class="skill-bar-item"><div class="skill-bar-label"><span><i class="fas fa-pen-fancy"></i> <span data-i18n="comp.content">Création de Contenu</span></span><span class="skill-pct">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
+                <span class="section-tag" data-i18n="projects.tag">// Réalisations</span>
+                <h2 class="section-title" data-i18n="projects.title">Projets</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="projects-grid">
-                <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-image">
                         <div class="project-icon"><i class="fas fa-laptop"></i></div>
                     </div>
                     <div class="project-content">
-                        <h3>Penetration Testing Laboratory</h3>
-                        <p class="project-category">Offensive Security</p>
-                        <p class="project-description">Designed and deployed a dedicated penetration testing lab with virtual machines for attacker and target environments. Performed end-to-end penetration testing covering reconnaissance, scanning, exploitation, and privilege escalation.</p>
+                        <h3 data-i18n="projects.p1_title">Laboratoire de Test d'Intrusion</h3>
+                        <p class="project-category" data-i18n="projects.p1_cat">Sécurité Offensive</p>
+                        <p class="project-description" data-i18n="projects.p1_desc">Conception et déploiement d'un laboratoire dédié aux tests d'intrusion avec des machines virtuelles pour les environnements attaquant et cible. Tests d'intrusion complets couvrant la reconnaissance, le scan, l'exploitation et l'élévation de privilèges.</p>
                         <div class="project-tech">
                             <span class="tech-badge">Kali Linux</span>
                             <span class="tech-badge">Nmap</span>
@@ -219,23 +402,21 @@
                         </div>
                         <div class="project-highlights">
                             <ul>
-                                <li>Configured Linux-based vulnerable servers</li>
-                                <li>Exploited SQL Injection, weak authentication</li>
-                                <li>Documented remediation recommendations</li>
+                                <li data-i18n="projects.p1_h1">Configuré des serveurs Linux vulnérables</li>
+                                <li data-i18n="projects.p1_h2">Exploité des injections SQL et authentifications faibles</li>
+                                <li data-i18n="projects.p1_h3">Documenté les recommandations de remédiation</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-image">
                         <div class="project-icon"><i class="fas fa-network-wired"></i></div>
                     </div>
                     <div class="project-content">
-                        <h3>Enterprise Network Infrastructure Design</h3>
-                        <p class="project-category">Network Architecture</p>
-                        <p class="project-description">Designed and deployed a complete enterprise network architecture including routers, switches, servers, and secure LAN/WAN connections. Implemented network security mechanisms with VLANs and dynamic routing.</p>
+                        <h3 data-i18n="projects.p2_title">Conception d'Infrastructure Réseau Entreprise</h3>
+                        <p class="project-category" data-i18n="projects.p2_cat">Architecture Réseau</p>
+                        <p class="project-description" data-i18n="projects.p2_desc">Conception et déploiement d'une architecture réseau d'entreprise complète incluant routeurs, commutateurs, serveurs et connexions LAN/WAN sécurisées. Mise en place de mécanismes de sécurité réseau avec VLANs et routage dynamique.</p>
                         <div class="project-tech">
                             <span class="tech-badge">Cisco</span>
                             <span class="tech-badge">VLAN</span>
@@ -244,9 +425,9 @@
                         </div>
                         <div class="project-highlights">
                             <ul>
-                                <li>Implemented VLANs and static/dynamic routing</li>
-                                <li>Configured network security mechanisms</li>
-                                <li>Simulated and validated infrastructure</li>
+                                <li data-i18n="projects.p2_h1">Implémenté les VLANs et le routage statique/dynamique</li>
+                                <li data-i18n="projects.p2_h2">Configuré les mécanismes de sécurité réseau</li>
+                                <li data-i18n="projects.p2_h3">Simulé et validé l'infrastructure complète</li>
                             </ul>
                         </div>
                     </div>
@@ -255,11 +436,12 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ===== EXPERIENCE ===== -->
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Professional Experience</h2>
+                <span class="section-tag" data-i18n="exp.tag">// Parcours professionnel</span>
+                <h2 class="section-title" data-i18n="exp.title">Expérience Professionnelle</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="experience-timeline">
@@ -267,16 +449,19 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="exp-header">
-                            <h3>Cybersecurity Intern</h3>
+                            <h3 data-i18n="exp.job_title">Stagiaire en Cybersécurité</h3>
                             <span class="exp-company">Monty Holding (Monty Mobile)</span>
                         </div>
-                        <p class="exp-location"><i class="fas fa-map-marker-alt"></i> Lebanon / France</p>
+                        <p class="exp-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-i18n="exp.location">Liban / France</span>
+                        </p>
                         <ul class="exp-description">
-                            <li>Manual and automated penetration testing</li>
-                            <li>Attack surface analysis (passive & active reconnaissance)</li>
-                            <li>Red Team offensive security operations</li>
-                            <li>Vulnerability identification and risk analysis</li>
-                            <li>Security assessment and remediation recommendations</li>
+                            <li data-i18n="exp.item1">Tests d'intrusion manuels et automatisés</li>
+                            <li data-i18n="exp.item2">Analyse de la surface d'attaque (reconnaissance passive &amp; active)</li>
+                            <li data-i18n="exp.item3">Opérations red team en sécurité offensive</li>
+                            <li data-i18n="exp.item4">Identification des vulnérabilités et analyse des risques</li>
+                            <li data-i18n="exp.item5">Évaluation de la sécurité et recommandations de remédiation</li>
                         </ul>
                     </div>
                 </div>
@@ -284,24 +469,25 @@
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- ===== EDUCATION ===== -->
     <section id="education" class="education">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Education</h2>
+                <span class="section-tag" data-i18n="edu.tag">// Formation</span>
+                <h2 class="section-title" data-i18n="edu.title">Formation</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="education-timeline">
-                <!-- Engineering Degree -->
                 <div class="edu-item">
-                    <div class="edu-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
                     <div class="edu-content">
-                        <h3>Engineering Degree – Networks & Cybersecurity</h3>
-                        <p class="edu-school">ESAIP Engineering School</p>
-                        <p class="edu-period"><i class="fas fa-calendar"></i> 2021 – 2026 (Expected Graduation)</p>
-                        <p class="edu-description">Specialization in Networks and Cybersecurity with Erasmus exchange programs</p>
+                        <h3 data-i18n="edu.deg_title">Diplôme d'Ingénieur – Réseaux &amp; Cybersécurité</h3>
+                        <p class="edu-school" data-i18n="edu.deg_school">École d'Ingénieurs ESAIP</p>
+                        <p class="edu-period">
+                            <i class="fas fa-calendar"></i>
+                            <span data-i18n="edu.deg_period">2021 – 2026 (Diplôme Attendu)</span>
+                        </p>
+                        <p class="edu-description" data-i18n="edu.deg_desc">Spécialisation en Réseaux et Cybersécurité avec programmes d'échange Erasmus</p>
                         <div class="erasmus-tags">
                             <span class="erasmus-badge">BME (Hungary)</span>
                             <span class="erasmus-badge">West Attica (Greece)</span>
@@ -309,163 +495,307 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Baccalaureate -->
                 <div class="edu-item">
-                    <div class="edu-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
+                    <div class="edu-icon"><i class="fas fa-book"></i></div>
                     <div class="edu-content">
-                        <h3>Scientific Baccalaureate (S)</h3>
-                        <p class="edu-school">Lycée Saint Elie, Lebanon</p>
-                        <p class="edu-period"><i class="fas fa-calendar"></i> 2019–2020</p>
-                        <p class="edu-description">Honors: Good</p>
+                        <h3 data-i18n="edu.bac_title">Baccalauréat Scientifique (S)</h3>
+                        <p class="edu-school" data-i18n="edu.bac_school">Lycée Saint Elie, Liban</p>
+                        <p class="edu-period">
+                            <i class="fas fa-calendar"></i>
+                            <span data-i18n="edu.bac_period">2019–2020</span>
+                        </p>
+                        <p class="edu-description" data-i18n="edu.bac_desc">Mention : Bien</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
+    <!-- ===== CERTIFICATIONS ===== -->
     <section id="certifications" class="certifications">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Certifications & Training</h2>
+                <span class="section-tag" data-i18n="cert.tag">// Certifications</span>
+                <h2 class="section-title" data-i18n="cert.title">Certifications &amp; Formation</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="certifications-grid">
-                <!-- CEH -->
                 <div class="cert-card cert-active">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
                     <h3>Certified Ethical Hacker (CEH)</h3>
                     <p class="cert-issuer">v13 – Ongoing</p>
-                    <span class="cert-status">In Progress</span>
+                    <span class="cert-status" data-i18n="cert.status_progress">En cours</span>
                 </div>
-
-                <!-- EJPT+ -->
                 <div class="cert-card cert-active">
-                    <div class="cert-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
                     <h3>eJPT+ Certification</h3>
                     <p class="cert-issuer">Junior Penetration Tester – Ongoing</p>
-                    <span class="cert-status">In Progress</span>
+                    <span class="cert-status" data-i18n="cert.status_progress">En cours</span>
                 </div>
-
-                <!-- CCNA -->
                 <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
+                    <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
                     <h3>CCNA 1-2</h3>
                     <p class="cert-issuer">Cisco – 2024</p>
-                    <span class="cert-status">Completed</span>
+                    <span class="cert-status" data-i18n="cert.status_done">Complété</span>
                 </div>
-
-                <!-- Intro to Cybersecurity -->
                 <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
+                    <div class="cert-icon"><i class="fas fa-lock"></i></div>
                     <h3>Introduction to Cybersecurity</h3>
                     <p class="cert-issuer">Cisco – 2024</p>
-                    <span class="cert-status">Completed</span>
+                    <span class="cert-status" data-i18n="cert.status_done">Complété</span>
                 </div>
-
-                <!-- Endpoint Security -->
                 <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-laptop-shield"></i>
-                    </div>
+                    <div class="cert-icon"><i class="fas fa-laptop"></i></div>
                     <h3>Endpoint Security</h3>
                     <p class="cert-issuer">Cisco – 2024</p>
-                    <span class="cert-status">Completed</span>
+                    <span class="cert-status" data-i18n="cert.status_done">Complété</span>
                 </div>
-
-                <!-- ANSSI MOOC -->
                 <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
+                    <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
                     <h3>MOOC Cybersecurity</h3>
                     <p class="cert-issuer">ANSSI – 2025</p>
-                    <span class="cert-status">Completed</span>
+                    <span class="cert-status" data-i18n="cert.status_done">Complété</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ===== LEP ===== -->
+    <section id="lep" class="lep">
+        <div class="lep-spine"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="lep.tag">// Roadmap</span>
+                <h2 class="section-title" data-i18n="lep.title">Mon LEP sur 2 ans</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle" data-i18n="lep.subtitle">Ma trajectoire professionnelle &amp; personnelle pour 2026–2027</p>
+            </div>
+            <div class="lep-timeline">
+                <!-- 2026 -->
+                <div class="lep-block scroll-reveal" data-delay="0">
+                    <div class="lep-year-col">
+                        <div class="lep-year-dot cyan"></div>
+                        <span class="lep-year-label cyan">2026</span>
+                        <div class="lep-year-line"></div>
+                    </div>
+                    <div class="lep-milestones">
+                        <div class="lep-milestone">
+                            <div class="milestone-icon cyan"><i class="fas fa-shield-alt"></i></div>
+                            <div class="milestone-content">
+                                <h4 data-i18n="lep.m1_title">Approfondir l'Expertise Cybersécurité</h4>
+                                <p data-i18n="lep.m1_desc">Obtenir les certifications CEH et eJPT+, renforcer les compétences en sécurité offensive et réaliser des challenges CTF.</p>
+                            </div>
+                        </div>
+                        <div class="lep-milestone">
+                            <div class="milestone-icon cyan"><i class="fas fa-briefcase"></i></div>
+                            <div class="milestone-content">
+                                <h4 data-i18n="lep.m2_title">Gagner en Expérience Professionnelle</h4>
+                                <p data-i18n="lep.m2_desc">Décrocher un stage ou une alternance dans un environnement exigeant lié à la cybersécurité ou aux réseaux.</p>
+                            </div>
+                        </div>
+                        <div class="lep-milestone">
+                            <div class="milestone-icon cyan"><i class="fas fa-bug"></i></div>
+                            <div class="milestone-content">
+                                <h4 data-i18n="lep.m3_title">Projets Offensive Security</h4>
+                                <p data-i18n="lep.m3_desc">Développer des projets concrets en pentesting, red team et analyse de vulnérabilités sur des environnements contrôlés.</p>
+                            </div>
+                        </div>
+                        <div class="lep-milestone">
+                            <div class="milestone-icon cyan"><i class="fas fa-code"></i></div>
+                            <div class="milestone-content">
+                                <h4 data-i18n="lep.m4_title">Développer des Projets Web Avancés</h4>
+                                <p data-i18n="lep.m4_desc">Créer des applications modernes et sécurisées en combinant cybersécurité, design et développement web.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lep-connector scroll-reveal" data-delay="100">
+                    <div class="lep-connector-line"></div>
+                    <div class="lep-connector-node"><i class="fas fa-arrow-down"></i></div>
+                    <div class="lep-connector-line"></div>
+                </div>
+
+                <!-- 2027 -->
+                <div class="lep-block scroll-reveal" data-delay="200">
+                    <div class="lep-year-col">
+                        <div class="lep-year-dot purple"></div>
+                        <span class="lep-year-label purple">2027</span>
+                        <div class="lep-year-line purple"></div>
+                    </div>
+                    <div class="lep-milestones">
+                        <div class="lep-milestone premium">
+                            <div class="milestone-icon purple"><i class="fas fa-building"></i></div>
+                            <div class="milestone-content">
+                                <h4 data-i18n="lep.m5_title">Lancer Ma Propre Agence Digitale</h4>
+                                <p data-i18n-html="lep.m5_desc">Créer une agence combinant <strong>Marketing Digital</strong>, <strong>Développement Web</strong> et <strong>Services Cybersécurité</strong> — une offre unique sur le marché.</p>
+                            </div>
+                        </div>
+                        <div class="lep-milestone premium">
+                            <div class="milestone-icon purple"><i class="fas fa-globe"></i></div>
+                            <div class="milestone-content">
+                                <h4 data-i18n="lep.m6_title">Construire un Réseau International</h4>
+                                <p data-i18n="lep.m6_desc">Collaborer avec des marques et entreprises à l'échelle internationale, développer une présence digitale globale et impactante.</p>
+                            </div>
+                        </div>
+                        <div class="lep-milestone premium">
+                            <div class="milestone-icon purple"><i class="fas fa-chart-line"></i></div>
+                            <div class="milestone-content">
+                                <h4 data-i18n="lep.m7_title">Croissance Continue &amp; Excellence</h4>
+                                <p data-i18n="lep.m7_desc">Continuer à apprendre, évoluer techniquement et créer un impact digital significatif à travers des projets innovants.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VALEURS ===== -->
+    <section id="valeurs" class="valeurs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="val.tag">// Identité</span>
+                <h2 class="section-title" data-i18n="val.title">Mes Valeurs &amp; Anti-Valeurs</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="valeurs-split">
+                <div class="valeurs-column valeurs-positives scroll-reveal" data-delay="0">
+                    <div class="valeurs-col-header">
+                        <div class="col-header-icon green"><i class="fas fa-check-circle"></i></div>
+                        <h3 data-i18n="val.col1">Mes Valeurs</h3>
+                    </div>
+                    <div class="valeurs-cards">
+                        <div class="valeur-card green"><div class="valeur-icon"><i class="fas fa-fire"></i></div><span data-i18n="val.v1">Discipline</span></div>
+                        <div class="valeur-card green"><div class="valeur-icon"><i class="fas fa-handshake"></i></div><span data-i18n="val.v2">Respect</span></div>
+                        <div class="valeur-card green"><div class="valeur-icon"><i class="fas fa-mountain"></i></div><span data-i18n="val.v3">Ambition</span></div>
+                        <div class="valeur-card green"><div class="valeur-icon"><i class="fas fa-paint-brush"></i></div><span data-i18n="val.v4">Créativité</span></div>
+                        <div class="valeur-card green"><div class="valeur-icon"><i class="fas fa-users"></i></div><span data-i18n="val.v5">Esprit d'Équipe</span></div>
+                        <div class="valeur-card green"><div class="valeur-icon"><i class="fas fa-infinity"></i></div><span data-i18n="val.v6">Persévérance</span></div>
+                    </div>
+                </div>
+                <div class="valeurs-column valeurs-negatives scroll-reveal" data-delay="200">
+                    <div class="valeurs-col-header">
+                        <div class="col-header-icon red"><i class="fas fa-times-circle"></i></div>
+                        <h3 data-i18n="val.col2">Anti-Valeurs</h3>
+                    </div>
+                    <div class="valeurs-cards">
+                        <div class="valeur-card red"><div class="valeur-icon"><i class="fas fa-bed"></i></div><span data-i18n="val.av1">Paresse</span></div>
+                        <div class="valeur-card red"><div class="valeur-icon"><i class="fas fa-cloud-rain"></i></div><span data-i18n="val.av2">Négativité</span></div>
+                        <div class="valeur-card red"><div class="valeur-icon"><i class="fas fa-comment-slash"></i></div><span data-i18n="val.av3">Manque de Communication</span></div>
+                        <div class="valeur-card red"><div class="valeur-icon"><i class="fas fa-random"></i></div><span data-i18n="val.av4">Désorganisation</span></div>
+                        <div class="valeur-card red"><div class="valeur-icon"><i class="fas fa-couch"></i></div><span data-i18n="val.av5">Passivité</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VISION ===== -->
+    <section id="vision" class="vision">
+        <div class="vision-particles" aria-hidden="true"></div>
+        <div class="vision-ambient" aria-hidden="true"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag vision-tag" data-i18n="vision.tag">// Futur</span>
+                <h2 class="section-title" data-i18n="vision.title">Comment je me vois dans 3 à 5 ans</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="vision-content">
+                <div class="vision-quote scroll-reveal">
+                    <div class="vision-quote-mark"><i class="fas fa-quote-left"></i></div>
+                    <blockquote data-i18n="vision.quote">
+                        "Dans les 3 à 5 prochaines années, je me vois bâtir ma propre agence digitale combinant cybersécurité, développement web, branding, création de contenu et marketing digital."
+                    </blockquote>
+                </div>
+                <div class="vision-pillars">
+                    <div class="vision-pillar scroll-reveal" data-delay="0">
+                        <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4 data-i18n="vision.p1_title">Cybersécurité</h4>
+                        <p data-i18n="vision.p1_desc">Expert reconnu en sécurité offensive &amp; défensive</p>
+                    </div>
+                    <div class="vision-pillar scroll-reveal" data-delay="120">
+                        <div class="pillar-icon"><i class="fas fa-code"></i></div>
+                        <h4 data-i18n="vision.p2_title">Développement Web</h4>
+                        <p data-i18n="vision.p2_desc">Applications modernes &amp; expériences digitales premium</p>
+                    </div>
+                    <div class="vision-pillar scroll-reveal" data-delay="240">
+                        <div class="pillar-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h4 data-i18n="vision.p3_title">Marketing Digital</h4>
+                        <p data-i18n="vision.p3_desc">Stratégies de communication &amp; branding impactantes</p>
+                    </div>
+                    <div class="vision-pillar scroll-reveal" data-delay="360">
+                        <div class="pillar-icon"><i class="fas fa-globe"></i></div>
+                        <h4 data-i18n="vision.p4_title">Impact International</h4>
+                        <p data-i18n="vision.p4_desc">Collaborations mondiales &amp; projets à forte valeur</p>
+                    </div>
+                </div>
+                <div class="vision-mission scroll-reveal" data-delay="500">
+                    <div class="vision-mission-line"></div>
+                    <p data-i18n-html="vision.mission">Je veux travailler sur des projets à impact, collaborer à l'international, et continuer à grandir techniquement et créativement. Mon objectif : créer des expériences numériques modernes tout en aidant les entreprises à devenir plus <strong>sécurisées</strong> et <strong>visibles</strong> en ligne.</p>
+                    <div class="vision-mission-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Get in Touch</h2>
+                <span class="section-tag" data-i18n="contact.tag">// Contact</span>
+                <h2 class="section-title" data-i18n="contact.title">Me Contacter</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="contact-wrapper">
-                <!-- Contact Info -->
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-details">
-                            <h4>Email</h4>
+                            <h4 data-i18n="contact.email_label">Email</h4>
                             <a href="mailto:albertonahra58@gmail.com">albertonahra58@gmail.com</a>
                         </div>
                     </div>
-
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
                         <div class="contact-details">
-                            <h4>Phone</h4>
+                            <h4 data-i18n="contact.phone_label">Téléphone</h4>
                             <p>+961 70808014</p>
                             <p>+33 610850624</p>
                         </div>
                     </div>
-
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>Lebanon & France</p>
+                            <h4 data-i18n="contact.loc_label">Localisation</h4>
+                            <p data-i18n="contact.loc_value">Liban &amp; France</p>
                         </div>
                     </div>
-
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-language"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-language"></i></div>
                         <div class="contact-details">
-                            <h4>Languages</h4>
-                            <p>French (Bilingual) • English (Fluent) • Arabic (Native) • Spanish (Basic)</p>
+                            <h4 data-i18n="contact.lang_label">Langues</h4>
+                            <p data-i18n="contact.lang_value">Français (Bilingue) · Anglais (Courant) · Arabe (Natif) · Espagnol (Basique)</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Contact Form -->
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" data-i18n-placeholder="contact.ph_name" placeholder="Votre Nom" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" data-i18n-placeholder="contact.ph_email" placeholder="Votre Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Subject">
+                            <input type="text" data-i18n-placeholder="contact.ph_subject" placeholder="Sujet">
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <textarea data-i18n-placeholder="contact.ph_message" placeholder="Votre Message" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-submit">
-                            <i class="fas fa-paper-plane"></i> Send Message
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-i18n="contact.send_btn">Envoyer le Message</span>
                         </button>
                     </form>
                 </div>
@@ -473,13 +803,16 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2026 Alberto Nahra. All rights reserved.</p>
+                <p data-i18n="footer.copy">&copy; 2026 Alberto Nahra. Tous droits réservés.</p>
                 <div class="footer-links">
-                    <a href="#home"><i class="fas fa-arrow-up"></i> Back to Top</a>
+                    <a href="#home">
+                        <i class="fas fa-arrow-up"></i>
+                        <span data-i18n="footer.back">Retour en haut</span>
+                    </a>
                 </div>
             </div>
         </div>
